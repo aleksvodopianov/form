@@ -1,0 +1,15 @@
+.idea
+
+node_modules
+
+package-lock.json
+
+.jshintrc
+
+.prettierrc.json
+
+gulpfile.js
+
+README_GULPFILE.md 
+
+package.json
