@@ -296,12 +296,12 @@ aside {
 
 header {
   width: 100%;
-  display: block;
+  height: 50px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-
-.no-webp img {
-  background: url("img/aleks.jpg") 0 0 no-repeat; }
 
 footer {
   display: block;
@@ -309,5 +309,3 @@ footer {
   margin: 0 0 0;
   padding: 0 0 0;
 }
-
-.webp img { background: url(img/aleks.webp) 0 0 no-repeat; }
