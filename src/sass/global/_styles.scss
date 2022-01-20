@@ -1,26 +1,35 @@
 /* wrapper */
 #wrapper {
-	display:block;
-	position:relative;
-	width:100%;
-	height:100%;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
+
 .layout {
-	margin:0 auto;
-	position:relative;
-	width:1400px;
+	margin: 0 auto;
+	position: relative;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
+
 main {
-	display:block;
-	width:100%;
+	display: block;
+	width: 100%;
 	position: relative;
 }
-#content{
+
+#content {
 	position: relative;
 }
+
 #sidebar {
 	position: relative;
 }
-aside{
+
+aside {
 	position: relative;
 }
