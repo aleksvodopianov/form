@@ -244,6 +244,15 @@ footer {
   position: relative;
   width: 100%;
   height: 100%;
+  background-image: url(../img/photo_2021-11-29_23-07-36.webp);
+  background-color: #cccccc;
+  height: 100vh;
+  /* You must set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
 }
 
 .layout {
@@ -345,6 +354,7 @@ footer {
   border-radius: 10px;
   padding: 20px 0;
   margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .add .promo__interactive-title {
@@ -433,7 +443,7 @@ footer {
 }
 
 .filmsList {
-  height: 300px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,4 +462,5 @@ footer {
   border-radius: 10px;
   padding: 20px 0;
   margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
 }

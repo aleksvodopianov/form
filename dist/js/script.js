@@ -1,3 +1,4 @@
+'use strict';
 // Next function checks browser support WEBP format ********************************************************************************************************
 function testWebP(callback) {
     let webP = new Image();
@@ -15,4 +16,9 @@ testWebP(function (support) {
         document.querySelector('body').classList.add('no-webp');
         console.log('not use webp');
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addForm = document.querySelector('.add'),
+        addInput = addForm.querySelector('.adding__input');
 });
