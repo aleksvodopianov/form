@@ -18,6 +18,10 @@ testWebP(function (support) {
     }
 });
 
+// document.querySelector('#wrapper').style.backgroundImage =
+//     'url(../../img/photo_2021-11-29_23-07-36.jpg)';
+// document.reload();
+
 document.addEventListener('DOMContentLoaded', () => {
     const dbFilms = {
         list: [],
@@ -30,33 +34,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // filmsListContainer.innerHTML = '';
 
-    const createFilmsList = () => {
+    addForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const newFilm = addInput.value;
+        if (newFilm) {
+            dbFilms.list.push(newFilm);
+            dbFilms.list.sort();
+            createFilmsList(dbFilms.list, filmsUlList);
+            console.log(dbFilms.list);
+
+            let checked = addForm.querySelector(`[type='checkbox']:checked`);
+            if (checked) {
+                console.log('Добавляем любимый фильм');
+            }
+        }
+        event.target.reset();
+    });
+
+    const createFilmsList = (array, parent) => {
         // filmsListContainer.innerHTML = `
         //     <div class="filmsList">
         //         <p>Просмотренные фильмы:</p>
         //         <ul class="filmsUlList"></ul>
         //     </div>`;
 
-        dbFilms.list.forEach((item, index) => {
-            filmsUlList.innerHTML = `
+        parent.innerHTML = '';
+
+        array.forEach((item, index) => {
+            parent.innerHTML += `
             <li class="promo__interactive-item">
                ${index + 1}. ${item}
             </li>`;
         });
     };
-
-    addForm.addEventListener('submit', evt => {
-        evt.preventDefault();
-        const newFilm = addInput.value;
-        if (newFilm) {
-            dbFilms.list.push(newFilm);
-            dbFilms.list.sort();
-            filmsUlList.innerHTML = '';
-            createFilmsList();
-            console.log(dbFilms.list);
-        }
-        addInput.value = '';
-    });
 });
 
 // Не правильно добавляются фильмы в список на странице
