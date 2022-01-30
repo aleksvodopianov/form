@@ -18,7 +18,7 @@
     .promo__interactive-item {
         // display: inline-block;
         position: relative;
-        width: 200px;
+        width: 250px;
         font-weight: 300;
         font-size: 20px;
         line-height: 10px;
@@ -28,16 +28,16 @@
         text-transform: uppercase;
 
         &:hover {
-            .redHeart {
+            .trash {
                 content: '';
                 display: block;
                 position: absolute;
-                right: -30px;
-                top: 50%;
+                right: 0px;
+                top: 30%;
                 transform: translateY(-50%);
                 width: 20px;
                 height: 20px;
-                background: url('../../img/redheart.png') center (center / cover) no-repeat;
+                background: url('../../img/trash.png') center (center / cover) no-repeat;
                 cursor: pointer;
             }
         }

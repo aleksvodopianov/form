@@ -462,7 +462,7 @@ footer {
 
 .filmsList .promo__interactive-item {
   position: relative;
-  width: 200px;
+  width: 250px;
   font-weight: 300;
   font-size: 20px;
   line-height: 10px;
@@ -472,15 +472,15 @@ footer {
   text-transform: uppercase;
 }
 
-.no-webp .filmsList .promo__interactive-item:hover .redHeart {
-  background: url("../../img/redheart.png") center center/cover no-repeat; }
+.no-webp .filmsList .promo__interactive-item:hover .trash {
+  background: url("../../img/trash.png") center center/cover no-repeat; }
 
-.filmsList .promo__interactive-item:hover .redHeart {
+.filmsList .promo__interactive-item:hover .trash {
   content: '';
   display: block;
   position: absolute;
-  right: -30px;
-  top: 50%;
+  right: 0px;
+  top: 30%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -491,4 +491,4 @@ footer {
 
 .webp #wrapper { background-image: url(../img/photo_2021-11-29_23-07-36.webp); }
 
-.webp .filmsList .promo__interactive-item:hover .redHeart { background: url(../../img/redheart.webp) center center/cover no-repeat; }
+.webp .filmsList .promo__interactive-item:hover .trash { background: url(../../img/trash.webp) center center/cover no-repeat; }

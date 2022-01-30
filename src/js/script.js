@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         let newFilm = addInput.value;
         if (newFilm) {
-            if (newFilm.length > 12) {
-                newFilm = `${newFilm.substring(0, 12)}...`;
+            if (newFilm.length > 14) {
+                newFilm = `${newFilm.substring(0, 14)}...`;
             }
 
             dbFilms.list.push(newFilm);
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             parent.innerHTML += `
             <li class="promo__interactive-item">
                ${index + 1}. ${item}
-               <div class="redHeart"></div>
+               <div class="trash"></div>
             </li>`;
         });
     };
