@@ -36,8 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addForm.addEventListener('submit', event => {
         event.preventDefault();
-        const newFilm = addInput.value;
+        let newFilm = addInput.value;
         if (newFilm) {
+            if (newFilm.length > 12) {
+                newFilm = `${newFilm.substring(0, 12)}...`;
+            }
+
             dbFilms.list.push(newFilm);
             dbFilms.list.sort();
             createFilmsList(dbFilms.list, filmsUlList);
@@ -64,9 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             parent.innerHTML += `
             <li class="promo__interactive-item">
                ${index + 1}. ${item}
+               <div class="redHeart"></div>
             </li>`;
         });
     };
 });
-
-// Не правильно добавляются фильмы в список на странице

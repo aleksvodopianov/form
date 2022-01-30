@@ -456,4 +456,39 @@ footer {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.filmsList p {
+  margin-bottom: 10px;
+}
+
+.filmsList .promo__interactive-item {
+  position: relative;
+  width: 200px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 10px;
+  color: #000000;
+  margin-bottom: 15px;
+  padding-right: 40px;
+  text-transform: uppercase;
+}
+
+.no-webp .filmsList .promo__interactive-item:hover .redHeart {
+  background: url("../../img/redheart.png") center center/cover no-repeat; }
+
+.filmsList .promo__interactive-item:hover .redHeart {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .webp #wrapper { background-image: url(../img/photo_2021-11-29_23-07-36.webp); }
+
+.webp .filmsList .promo__interactive-item:hover .redHeart { background: url(../../img/redheart.webp) center center/cover no-repeat; }
