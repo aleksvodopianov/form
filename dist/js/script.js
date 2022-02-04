@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         filmsList = filmsListContainer.querySelector('.filmsList'),
         filmsUlList = filmsList.querySelector('.filmsUlList');
 
-    // filmsListContainer.innerHTML = '';
-
     addForm.addEventListener('submit', event => {
         event.preventDefault();
         let newFilm = addInput.value;
@@ -43,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             dbFilms.list.push(newFilm);
-            dbFilms.list.sort();
             createFilmsList(dbFilms.list, filmsUlList);
             console.log(dbFilms.list);
 
@@ -56,11 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const createFilmsList = (array, parent) => {
-        // filmsListContainer.innerHTML = `
-        //     <div class="filmsList">
-        //         <p>Просмотренные фильмы:</p>
-        //         <ul class="filmsUlList"></ul>
-        //     </div>`;
+        dbFilms.list.sort();
 
         parent.innerHTML = '';
 
@@ -70,6 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
                ${index + 1}. ${item}
                <div class="trash"></div>
             </li>`;
+        });
+
+        document.querySelectorAll('.trash').forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.remove();
+                dbFilms.list.splice(i, 1);
+            });
         });
     };
 });
