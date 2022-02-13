@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', () => {
                 btn.parentElement.remove();
                 dbFilms.list.splice(i, 1);
+                createFilmsList(array, parent);
             });
         });
     };
